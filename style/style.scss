@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
-@mixin flexCenter {
+@mixin flexCenter($direction) {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: $direction;
 }
 
 $primaryTextBlue: hsl(238, 29%, 16%);
@@ -32,8 +33,7 @@ body {
     .illustration {
     }
     .faq {
-      @include flexCenter();
-      flex-direction: column;
+      @include flexCenter(column);
       .accordion {
         border-bottom: solid 2px $dividers;
         padding-top: 15px;
