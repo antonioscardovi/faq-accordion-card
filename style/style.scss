@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
-@mixin flexCenter($direction) {
+@mixin flexCenter($content, $direction, $align) {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: $content;
+  align-items: $align;
   flex-direction: $direction;
 }
 
@@ -19,24 +19,47 @@ body {
 }
 
 .background {
-  @include flexCenter();
+  @include flexCenter(center, row, center);
   height: 100vh;
   background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   .card {
-    @include flexCenter();
+    @include flexCenter(center, row, center);
     background-color: #fcfcfc;
     padding: 25px;
-    max-width: 1100px;
+    max-width: 1000px;
     max-height: 600px;
     border-radius: 15px;
     box-shadow: 2px 1px 55px 2px;
     .illustration {
+      @include flexCenter(center, row, center);
+      flex-wrap: wrap;
+      flex: 1 1 0;
+
+      .shadow {
+        border: 2px solid $dividers;
+        border-radius: 10px;
+        max-width: 100px;
+        max-height: 100px;
+        padding: 25px;
+        margin: 10px;
+        transform: rotate(45deg);
+      }
     }
     .faq {
-      @include flexCenter(column);
+      @include flexCenter(center, column, center);
+      align-items: flex-start;
+      flex: 1 1 0;
       .accordion {
-        border-bottom: solid 2px $dividers;
-        padding-top: 15px;
+        border-bottom: solid 1px $dividers;
+        padding-top: 5px;
+        .question {
+          font-weight: 700;
+        }
+        .answer {
+          display: none;
+          font-weight: 500;
+          font-size: 12px;
+        }
       }
     }
   }
