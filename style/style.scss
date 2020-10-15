@@ -30,11 +30,11 @@ body {
     max-height: 500px;
     border-radius: 15px;
     box-shadow: 2px 1px 55px 2px;
+    overflow: hidden;
     .illustration {
       // @include flexCenter(center, row, center);
       flex-wrap: wrap;
       flex: 1 1 0;
-
       .shadow {
         border: 2px solid $dividers;
         border-radius: 10px;
