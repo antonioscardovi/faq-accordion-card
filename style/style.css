@@ -43,26 +43,13 @@ body {
   background-color: #fcfcfc;
   padding: 25px;
   max-width: 1000px;
-  max-height: 600px;
+  max-height: 500px;
   border-radius: 15px;
   -webkit-box-shadow: 2px 1px 55px 2px;
           box-shadow: 2px 1px 55px 2px;
 }
 
 .background .card .illustration {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-flex: 1;
@@ -77,8 +64,8 @@ body {
   max-height: 100px;
   padding: 25px;
   margin: 10px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate3d(100, 1, 1, 45deg);
+          transform: rotate3d(100, 1, 1, 45deg);
 }
 
 .background .card .faq {
@@ -101,15 +88,39 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0;
+  padding: 25px;
+  margin-bottom: 50px;
+}
+
+.background .card .faq h1 {
+  font-size: 36px;
 }
 
 .background .card .faq .accordion {
   border-bottom: solid 1px #e7e7e9;
-  padding-top: 5px;
+  padding-top: 10px;
+  min-width: 400px;
 }
 
 .background .card .faq .accordion .question {
-  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-weight: 500;
+}
+
+.background .card .faq .accordion .question .arrow {
+  margin-left: auto;
 }
 
 .background .card .faq .accordion .answer {

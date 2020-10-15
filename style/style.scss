@@ -27,11 +27,11 @@ body {
     background-color: #fcfcfc;
     padding: 25px;
     max-width: 1000px;
-    max-height: 600px;
+    max-height: 500px;
     border-radius: 15px;
     box-shadow: 2px 1px 55px 2px;
     .illustration {
-      @include flexCenter(center, row, center);
+      // @include flexCenter(center, row, center);
       flex-wrap: wrap;
       flex: 1 1 0;
 
@@ -42,18 +42,28 @@ body {
         max-height: 100px;
         padding: 25px;
         margin: 10px;
-        transform: rotate(45deg);
+        transform: rotate3d(100, 1, 1, 45deg);
       }
     }
     .faq {
       @include flexCenter(center, column, center);
       align-items: flex-start;
       flex: 1 1 0;
+      padding: 25px;
+      margin-bottom: 50px;
+      h1 {
+        font-size: 36px;
+      }
       .accordion {
         border-bottom: solid 1px $dividers;
-        padding-top: 5px;
+        padding-top: 10px;
+        min-width: 400px;
         .question {
-          font-weight: 700;
+          @include flexCenter(flex-start, row, center);
+          font-weight: 500;
+          .arrow {
+            margin-left: auto;
+          }
         }
         .answer {
           display: none;
