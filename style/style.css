@@ -26,6 +26,10 @@ body {
   background: linear-gradient(180deg, #af67e9, #6565e7);
 }
 
+.background .box {
+  background-color: red;
+}
+
 .background .card {
   display: -webkit-box;
   display: -ms-flexbox;
