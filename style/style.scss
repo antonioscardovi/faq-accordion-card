@@ -23,7 +23,9 @@ body {
   height: 100vh;
   background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   .box {
-    background-color: red;
+    position: absolute;
+    left: 332px;
+    top: 420px;
   }
   .card {
     @include flexCenter(center, row, center);
@@ -35,14 +37,16 @@ body {
     box-shadow: 2px 1px 55px 2px;
     overflow: hidden;
     .illustration {
-      // @include flexCenter(center, row, center);
-      flex-wrap: wrap;
-      flex: 1 1 0;
+      padding: 50px;
+      img {
+        padding-right: 50px;
+      }
       .shadow {
+        position: absolute;
         border: 2px solid $dividers;
         border-radius: 10px;
         max-width: 100px;
-        max-height: 100px;
+        // max-height: 300px;
         padding: 25px;
         margin: 10px;
         transform: rotate3d(100, 1, 1, 45deg);
@@ -52,7 +56,8 @@ body {
       @include flexCenter(center, column, center);
       align-items: flex-start;
       flex: 1 1 0;
-      padding: 25px;
+      padding: 50px;
+      padding-right: 250px;
       margin-bottom: 50px;
       h1 {
         font-size: 36px;
