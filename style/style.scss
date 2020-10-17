@@ -82,15 +82,19 @@ body {
           @include flexCenter(flex-start, row, center);
           font-weight: 500;
           user-select: none;
+          transition: 0.5s;
           cursor: pointer;
           .arrow {
             margin-left: auto;
+            transition: transform 0.2s ease-out;
           }
         }
         .answer {
-          display: none;
           font-weight: 500;
           font-size: 12px;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
         }
       }
     }
