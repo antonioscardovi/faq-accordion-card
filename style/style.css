@@ -311,7 +311,7 @@ body {
   }
 }
 
-@media (max-width: 360px) and (max-height: 640px) {
+@media (max-width: 375px) {
   .background {
     height: unset;
   }
