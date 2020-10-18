@@ -81,12 +81,15 @@ body {
         .question {
           @include flexCenter(flex-start, row, center);
           font-weight: 500;
+          cursor: pointer;
           user-select: none;
           transition: 0.5s;
-          cursor: pointer;
           .arrow {
             margin-left: auto;
             transition: transform 0.2s ease-out;
+          }
+          .arrow-up {
+            transform: rotateZ(180deg);
           }
         }
         .answer {
@@ -95,6 +98,10 @@ body {
           max-height: 0;
           overflow: hidden;
           transition: max-height 0.2s ease-out;
+        }
+        .show {
+          opacity: 1;
+          max-height: 500px;
         }
       }
     }
