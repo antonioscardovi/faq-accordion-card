@@ -168,12 +168,14 @@ body {
   font-size: 12px;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.2s ease-out;
-  transition: max-height 0.2s ease-out;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+  margin-bottom: 10px;
 }
 
 .background .card .faq .accordion .show {
-  opacity: 1;
   max-height: 500px;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
