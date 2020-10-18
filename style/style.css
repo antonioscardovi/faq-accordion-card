@@ -57,7 +57,11 @@ body {
 }
 
 .background .card .illustration {
-  padding: 50px;
+  padding: 100px;
+  background-image: url("/images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: auto;
 }
 
 .background .card .illustration img {
@@ -65,16 +69,14 @@ body {
 }
 
 .background .card .illustration .shadow {
-  position: absolute;
   border: 2px solid #e7e7e9;
   border-radius: 25px;
   min-width: 300px;
   min-height: 300px;
   padding: 25px;
-  margin: 10px;
+  margin: -272px;
   -webkit-transform: rotate3d(1, 1, 0, 45deg);
           transform: rotate3d(1, 1, 0, 45deg);
-  z-index: -1;
 }
 
 .background .card .illustration .line-1 {
@@ -113,11 +115,12 @@ body {
           flex: 1 1 0;
   padding: 50px;
   padding-right: 250px;
-  margin-bottom: 50px;
 }
 
 .background .card .faq h1 {
+  position: absolute;
   font-size: 36px;
+  top: 250px;
 }
 
 .background .card .faq .accordion {
@@ -163,9 +166,13 @@ body {
           transform: rotateZ(180deg);
 }
 
+.background .card .faq .accordion .active {
+  font-weight: 700;
+}
+
 .background .card .faq .accordion .answer {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 13px;
   max-height: 0;
   overflow: hidden;
   -webkit-transition: 0.4s ease-in-out;
