@@ -23,9 +23,9 @@ body {
   height: 100vh;
   background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   .box {
-    position: absolute;
-    left: 332px;
-    top: 435px;
+    position: relative;
+    left: 98px;
+    top: 50px;
   }
   .card {
     @include flexCenter(center, row, center);
@@ -73,9 +73,8 @@ body {
       flex: 1 1 0;
       padding: 100px 250px 50px 50px;
       h1 {
-        position: absolute;
+        position: relative;
         font-size: 36px;
-        top: 250px;
       }
       .accordion {
         border-bottom: solid 1px $dividers;
@@ -118,43 +117,21 @@ body {
   }
 }
 
-@media screen and (max-width: 1440px) and (max-height: 768px) {
+@media screen and (max-width: 1440px) {
   .background {
     .box {
-      top: 340px;
-      left: 100px;
-    }
-    .card {
-      .faq {
-        h1 {
-          top: 150px;
-        }
-      }
+      top: 50px;
     }
   }
 }
 
-@media screen and (max-width: 1366px) and (max-height: 768px) {
-  .background {
-    .box {
-      top: 332px;
-      left: 65px;
-    }
-    .card {
-      .faq {
-        h1 {
-          top: 150px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1024px) and (max-height: 640px) {
+@media (max-width: 1024px) {
   .background {
     height: unset;
     .box {
-      display: none;
+      top: -264px;
+      left: 304px;
+      width: 100px;
     }
     .card {
       flex-direction: column;
@@ -169,6 +146,7 @@ body {
         background-size: 500px;
         padding: 54px;
         img {
+          width: 340px;
           margin-top: -290px;
         }
       }
@@ -189,11 +167,17 @@ body {
   }
 }
 
-@media (max-width: 768px) and (max-height: 576px) {
+@media (max-width: 768px) {
   .background {
     .card {
       border-radius: 30px;
-      min-width: 620px;
+      min-width: unset;
+      max-width: 420px;
+      .illustration {
+        .img {
+          width: 320px;
+        }
+      }
     }
   }
 }
@@ -202,7 +186,7 @@ body {
   .background {
     height: unset;
     .box {
-      display: none;
+      // display: none;
     }
     .card {
       flex-direction: column;

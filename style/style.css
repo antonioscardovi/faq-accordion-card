@@ -27,9 +27,9 @@ body {
 }
 
 .background .box {
-  position: absolute;
-  left: 332px;
-  top: 435px;
+  position: relative;
+  left: 98px;
+  top: 50px;
 }
 
 .background .card {
@@ -118,9 +118,8 @@ body {
 }
 
 .background .card .faq h1 {
-  position: absolute;
+  position: relative;
   font-size: 36px;
-  top: 250px;
 }
 
 .background .card .faq .accordion {
@@ -188,32 +187,20 @@ body {
   opacity: 1;
 }
 
-@media screen and (max-width: 1440px) and (max-height: 768px) {
+@media screen and (max-width: 1440px) {
   .background .box {
-    top: 340px;
-    left: 100px;
-  }
-  .background .card .faq h1 {
-    top: 150px;
+    top: 50px;
   }
 }
 
-@media screen and (max-width: 1366px) and (max-height: 768px) {
-  .background .box {
-    top: 332px;
-    left: 65px;
-  }
-  .background .card .faq h1 {
-    top: 150px;
-  }
-}
-
-@media (max-width: 1024px) and (max-height: 640px) {
+@media (max-width: 1024px) {
   .background {
     height: unset;
   }
   .background .box {
-    display: none;
+    top: -264px;
+    left: 304px;
+    width: 100px;
   }
   .background .card {
     -webkit-box-orient: vertical;
@@ -233,6 +220,7 @@ body {
     padding: 54px;
   }
   .background .card .illustration img {
+    width: 340px;
     margin-top: -290px;
   }
   .background .card .faq {
@@ -252,19 +240,20 @@ body {
   }
 }
 
-@media (max-width: 768px) and (max-height: 576px) {
+@media (max-width: 768px) {
   .background .card {
     border-radius: 30px;
-    min-width: 620px;
+    min-width: unset;
+    max-width: 420px;
+  }
+  .background .card .illustration .img {
+    width: 320px;
   }
 }
 
-@media (max-width: 480px) and (max-height: 854px) {
+@media (max-width: 480px) {
   .background {
     height: unset;
-  }
-  .background .box {
-    display: none;
   }
   .background .card {
     -webkit-box-orient: vertical;
